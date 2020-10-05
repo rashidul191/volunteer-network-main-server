@@ -37,21 +37,21 @@ client.connect(err => {
     })
   })
 
-  app.post('/addFakeData', (req, res) =>{
-    const fakeDataUse = req.body;
-    dataCollection.insertOne(fakeDataUse)
-      .then(result => {
-        res.send(result.insertedCount > 0);
-      })
-    console.log(fakeDataUse);
-  })
+  // app.post('/addFakeData', (req, res) =>{
+  //   const fakeDataUse = req.body;
+  //   dataCollection.insertOne(fakeDataUse)
+  //     .then(result => {
+  //       res.send(result.insertedCount > 0);
+  //     })
+  //   console.log(fakeDataUse);
+  // })
  
-  app.get('/fakeDataUse',(req, res)=>{
-    dataCollection.find({})
-    .toArray((err, documents) =>{
-      res.send (documents);
-    })
-  })
+  // app.get('/fakeDataUse',(req, res)=>{
+  //   dataCollection.find({})
+  //   .toArray((err, documents) =>{
+  //     res.send (documents);
+  //   })
+  // })
 
 });
 
