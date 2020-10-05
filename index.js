@@ -15,7 +15,7 @@ const app = express()
 app.use(cors());
 app.use(bodyParser.json());
 
-const password = "volunteer191network";
+// const password = "volunteer191network";
 
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true  });
